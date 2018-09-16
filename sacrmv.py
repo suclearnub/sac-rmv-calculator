@@ -35,19 +35,19 @@ class SACRMV(BotModule):
             send_message = "[!] Invalid arguments."
             await client.send_message(message.channel, send_message)
             return 0
-        start_bar = msg[1]
-        end_bar = msg[2]
+        start_bar = int(msg[1])
+        end_bar = int(msg[2])
         bar = start_bar-end_bar
-        bottom_time = msg[3]
+        bottom_time = int(msg[3])
 
-        msw = msg[4]
+        msw = int(msg[4])
 
         pressure = (msw*0.099376) + 1
 
         sac = bar/bottom_time/pressure
 
-        service_pressure = msg[5]
-        tank_capacity = msg[6]
+        service_pressure = int(msg[5])
+        tank_capacity = int(msg[6])
         rmv = (tank_capacity/service_pressure)*sac
 
         send_message = "SAC: " + str(sac) + " bar/min" + "\n" \

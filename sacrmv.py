@@ -6,9 +6,11 @@ from modules.botModule import BotModule
 class SACRMV(BotModule):
     name = 'sacrmv'
 
-    description = 'Calculates SAC (Surface Air Consumption) and RMV (Respiratory Mean Volume) given dive times. \n' \
-                  '`!air [start_pressure BAR] [end_pressure BAR] [bottom_time MINUTE] [average_depth METRE] ' \
-                  '[tank_service_pressure BAR] [tank_capacity LITRE]`'
+    description = 'Calculation of SAC and RMV given dive times.'
+
+    help_text = 'Calculates SAC (Surface Air Consumption) and RMV (Respiratory Mean Volume) given dive times. \n' \
+                '`!air [start_pressure BAR] [end_pressure BAR] [bottom_time MINUTE] [average_depth METRE] ' \
+                '[tank_service_pressure BAR] [tank_capacity LITRE]`'
 
     trigger_string = 'air'
 

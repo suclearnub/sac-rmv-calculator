@@ -31,7 +31,7 @@ class SACRMV(BotModule):
             send_message = "[!] Missing arguments."
             await client.send_message(message.channel, send_message)
             return 0
-        if not self.is_number(msg):
+        if not self.is_number(msg[1:]):
             send_message = "[!] Invalid arguments."
             await client.send_message(message.channel, send_message)
             return 0
